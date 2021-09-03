@@ -1,0 +1,333 @@
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+  color: #333;
+  line-height: 1.6;
+}
+/* Box-sizing – это свойство CSS, которое делает верстку макетов сайта более понятным */
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+/* Головешка сайта */
+.header_hidden {
+  transform: translateY(-100%);
+}
+.b-header {
+  transition: 1s;
+  position: sticky;
+  top: 0;
+
+  font-family: "Montserrat", sans-serif;
+  width: 100%;
+  padding-top: 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background-color: white;
+}
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+/* Менюшка */
+.header_inner {
+  color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header_icon {
+  color: black;
+  text-decoration: none;
+  display: flex;
+}
+.icon {
+  margin-bottom: 19px;
+}
+.logo {
+  padding-left: 30px;
+  margin-top: 20px;
+  font-size: 24px;
+  font-weight: 700;
+}
+.b-nav {
+  font-size: 24px;
+}
+.nav_link {
+  position: relative;
+  display: flexbox;
+  vertical-align: top;
+  margin: 0 30px;
+  color: black;
+  font-weight: 400;
+  text-decoration: none;
+  transition: color 0.1s linear;
+}
+.nav_link:after {
+  content: "";
+  display: block;
+  height: 3px;
+  width: 100%;
+
+  background-color: #f8b500;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.1s linear;
+}
+.nav_link:hover {
+  color: #f8b500;
+}
+.nav_link:hover:after {
+  opacity: 1;
+}
+/* Картинка с заголовком и кнопкой */
+.b-intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  /* 100vh - значит на полный экран */
+  height: 100vh;
+  /* указываем путь к картинке, располагаем по центру и без повтра, если она маленькая */
+  background: url(../images/background_cafe.jpg) center no-repeat;
+  /* чтобы изображение было на весь экран */
+  background-size: cover;
+}
+
+.intro_inner {
+  width: 100%;
+  max-width: 880px;
+  margin: 0 auto;
+  margin-top: 200px;
+  text-align: center;
+}
+.intro_suptitle {
+  margin-bottom: 15px;
+  font-size: 82px;
+  font-weight: 700;
+  color: #fff;
+  text-align: center;
+}
+
+.intro_title {
+  font-size: 24px;
+  color: #fff;
+  font-weight: 500;
+  text-align: center;
+  line-height: 1.1;
+}
+.intro_title::after {
+  content: "";
+  display: block;
+  width: 200px;
+  height: 3px;
+  background-color: #fff;
+  margin: 60px auto;
+}
+
+.intro_btn {
+  padding: 12px 25px;
+  font-size: 24px;
+  text-decoration: none;
+  transition: background 0.1s linear, color 0.1s linear;
+  border-radius: 35px;
+  background: #ffffff;
+  color: #333;
+}
+.intro_btn:hover {
+  background-color: #f8b500;
+  color: #e5e5e5;
+}
+.b-section {
+  padding: 80px 0;
+}
+.section_header {
+  width: 100%;
+  max-width: 950px;
+  margin: 0 auto 30px;
+  text-align: center;
+}
+.section_title {
+  font-family: "Roboto", sans-serif;
+  font-size: 48px;
+  font-weight: 500;
+  color: #333333c2;
+}
+.section_suptitle {
+  font-size: 17px;
+  color: #333333;
+  margin-top: 20px;
+  text-align: center;
+}
+.section_suptitle p {
+  font-size: 17px;
+  color: #333333;
+}
+.section__items {
+  display: flex;
+  justify-content: space-between;
+}
+.section__item {
+  width: 322px;
+  height: 315px;
+  text-align: center;
+  background-color: #fff;
+}
+.section__item-title {
+  color: #333333;
+  font-weight: 500;
+  font-size: 24px;
+}
+.section__item-suptitle {
+  margin-top: 20px;
+  font-size: 18px;
+  color: #000000;
+}
+.section-gray {
+  background-color: #fafafa;
+  height: 436px;
+}
+/*b-firstdishes*/
+.b-dishesline {
+  min-width: 0;
+  display: flex;
+  justify-content: space-between;
+}
+.dish {
+  text-align: center;
+}
+.dish.meat {
+  margin-top: 100px;
+}
+.title_of_dishesline {
+  margin-bottom: 74px;
+  color: #333333;
+  font-weight: 500;
+  font-size: 24px;
+}
+
+.dish_title {
+  padding-top: 45px;
+  font-size: 20px;
+}
+hr {
+  margin-top: 65px;
+  margin-bottom: 70px;
+}
+/*slider - общий*/
+.slider {
+  position: relative;
+}
+.slick-slider {
+  min-width: 0;
+}
+.slick-track {
+  display: flex;
+  min-width: 0;
+}
+.slick-list {
+  overflow: hidden;
+}
+.slider .slick-arrow {
+  position: absolute;
+  top: 30%;
+  z-index: 10;
+  font-size: 0;
+  width: 70px;
+  height: 70px;
+}
+.slider .slick-arrow.slick-prev {
+  left: -80px;
+  background: url("../images/prev.svg") 0 100% no-repeat;
+}
+.slider .slick-arrow.slick-next {
+  right: -60px;
+  background: url("../images/next.svg") 0 100% no-repeat;
+}
+button.slick-arrow.slick-next {
+  border: none;
+}
+button.slick-arrow.slick-prev {
+  border: none;
+}
+/*шашлычное меню*/
+.btn-meat {
+  text-decoration: none;
+  background: #f8b500;
+  border: 1px solid #000000;
+  padding: 17px;
+  color: #333333;
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+}
+.btn-meat:hover {
+  color: #fff;
+  background-color: #333333;
+}
+/*contact*/
+.b-section.contact {
+  padding-top: 0;
+}
+.b-adress {
+  text-align: center;
+  padding-top: 50px;
+}
+.adress {
+  color: #f8b500;
+  font-weight: 500;
+  font-size: 36px;
+  padding-bottom: 45px;
+}
+.adress-info {
+  color: #000000;
+  font-size: 24px;
+  padding-bottom: 45px;
+}
+.adress-tel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.b-section.contact a {
+  text-decoration: none;
+  color: #000000;
+  font-size: 20px;
+  padding-left: 24px;
+}
+.b-section.contact a:hover {
+  color: #333333;
+}
+/*map*/
+.map {
+  display: flex;
+  justify-content: center;
+}
+/*footer*/
+.b-footer {
+  display: flex;
+  justify-content: space-between;
+}
+.footer_info {
+  display: flex;
+  justify-content: space-between;
+  color: #000000;
+  font-family: "Montserrat", sans-serif;
+  padding-bottom: 50px;
+}
